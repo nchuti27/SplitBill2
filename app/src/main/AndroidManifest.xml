@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Splitie">
         <activity
+            android:name=".EditUser"
+            android:exported="false" />
+        <activity
+            android:name=".Forgot_password"
+            android:exported="false" />
+        <activity
             android:name=".login"
             android:exported="false" />
         <activity
