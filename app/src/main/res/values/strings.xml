@@ -31,4 +31,10 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="password_txt">Password</string>
     <string name="register_txt">REGISTER</string>
+    <string name="register_text">Register</string>
+    <string name="username_text">Username</string>
+    <string name="name_text">Name</string>
+    <string name="confirm_password_text">Confirm Password</string>
+    <string name="password_text">Password</string>
+    <string name="register_btn_text">REGISTER</string>
 </resources>
