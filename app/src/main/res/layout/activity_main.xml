@@ -19,7 +19,7 @@
         android:id="@+id/tvAppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Split Next"
+        android:text="@string/split_next"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#000000"
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Friend"
+        android:text="@string/friend"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="#000000"
@@ -67,7 +67,7 @@
         android:id="@+id/tvSeeMoreFriend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="See More"
+        android:text="@string/see_more"
         android:textSize="12sp"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/tvFriendLabel"
@@ -98,7 +98,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@android:drawable/sym_def_app_icon"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -111,7 +112,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@android:drawable/sym_def_app_icon"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <ImageView
@@ -120,7 +122,8 @@
                 android:src="@android:drawable/ic_input_add"
                 android:padding="12dp"
                 android:background="@drawable/bg_circle_border"
-                app:tint="#000000"/>
+                app:tint="#000000"
+                tools:ignore="ContentDescription" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -129,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Group"
+        android:text="@string/group"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="#000000"
@@ -140,7 +143,7 @@
         android:id="@+id/tvSeeMoreGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="See More"
+        android:text="@string/see_more_text"
         android:textSize="12sp"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/tvGroupLabel"
@@ -171,7 +174,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@android:drawable/sym_def_app_icon"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -184,7 +188,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@android:drawable/sym_def_app_icon"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <ImageView
@@ -193,7 +198,8 @@
                 android:src="@android:drawable/ic_input_add"
                 android:padding="12dp"
                 android:background="@drawable/bg_circle_border"
-                app:tint="#000000"/>
+                app:tint="#000000"
+                tools:ignore="ContentDescription" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -219,12 +225,13 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@android:drawable/ic_menu_my_calendar"
-                app:tint="#000000"/>
+                app:tint="#000000"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Spilt the bill"
+                android:text="@string/spilt_the_bill"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -246,12 +253,13 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@android:drawable/ic_menu_agenda"
-                app:tint="#000000"/>
+                app:tint="#000000"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recent Bill"
+                android:text="@string/recent_bill"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -272,12 +280,13 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@android:drawable/ic_menu_rotate"
-                app:tint="#000000"/>
+                app:tint="#000000"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Owe"
+                android:text="@string/owe"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
