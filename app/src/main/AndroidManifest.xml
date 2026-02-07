@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Owe"
+            android:exported="false" />
+        <activity
             android:name=".CreateGroup"
             android:exported="false" />
         <activity
