@@ -10,4 +10,8 @@
     <color name="fintech_card_bg">#FFFFFF</color>
     <color name="fintech_text_main">#1A1A1A</color>
     <color name="fintech_text_sub">#666666</color>
+
+    <color name="fintech_blue_dark">#2A5A9A</color>
+    <color name="fintech_border">#E0E6ED</color>
+    <color name="red_error">#E53935</color>
 </resources>

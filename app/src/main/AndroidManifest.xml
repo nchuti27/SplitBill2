@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".BillSplit"
+            android:exported="false" />
+        <activity
             android:name=".GroupDetail"
             android:exported="false" />
         <activity
