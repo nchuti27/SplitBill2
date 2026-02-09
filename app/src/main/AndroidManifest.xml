@@ -12,12 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".find_user"
-            android:exported="false" />
-        <activity
-            android:name=".add_friend"
-            android:exported="false" />
-        <activity
             android:name=".BillDetail"
             android:exported="false" />
         <activity
