@@ -119,11 +119,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="40dp"
-                android:backgroundTint="#2E7D32"
+                android:backgroundTint="#3d79ca"
                 android:text="Save Changes"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/etPassword" />
+                app:layout_constraintTop_toBottomOf="@id/etPassword"
+                tools:layout_editor_absoluteX="24dp" />
 
             <Button
                 android:id="@+id/btnLogout"

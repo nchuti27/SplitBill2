@@ -12,9 +12,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ic_launcher_background"
-        app:tint="#2E7D32"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:tint="#2E7D32"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -22,9 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Split Next"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/imgUserProfile"
         app:layout_constraintEnd_toStartOf="@+id/btnNotification"
         app:layout_constraintStart_toEndOf="@+id/imgUserProfile"
@@ -35,10 +35,10 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/baseline_logout_24"
-        app:tint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUserProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgUserProfile"
-        app:layout_constraintBottom_toBottomOf="@+id/imgUserProfile"
+        app:tint="#000000"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -47,10 +47,10 @@
         android:layout_height="24dp"
         android:layout_marginEnd="16dp"
         android:src="@android:drawable/ic_popup_reminder"
-        app:tint="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/btnLogout"
         app:layout_constraintEnd_toStartOf="@+id/btnLogout"
         app:layout_constraintTop_toTopOf="@+id/btnLogout"
+        app:tint="#000000"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -59,9 +59,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Friend"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgUserProfile" />
 
@@ -70,64 +70,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="See More"
-        android:textSize="12sp"
         android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvFriendLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvFriendLabel" />
 
-    <HorizontalScrollView
-        android:id="@+id/scrollFriends"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFriends"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:scrollbars="none"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/tvFriendLabel"
-        tools:ignore="SpeakableTextPresentCheck">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="30dp"
-                app:cardElevation="0dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@android:drawable/sym_def_app_icon"
-                    android:scaleType="centerCrop"
-                    tools:ignore="ContentDescription" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="30dp"
-                app:cardElevation="0dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@android:drawable/sym_def_app_icon"
-                    android:scaleType="centerCrop"
-                    tools:ignore="ContentDescription" />
-            </androidx.cardview.widget.CardView>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@android:drawable/ic_input_add"
-                android:padding="12dp"
-                android:background="@drawable/bg_circle_border"
-                app:tint="#000000"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-    </HorizontalScrollView>
+        tools:listitem="@layout/item_contact" />
 
     <TextView
         android:id="@+id/tvGroupLabel"
@@ -135,82 +92,39 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Group"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollFriends" />
+        app:layout_constraintTop_toBottomOf="@+id/rvFriends" />
 
     <TextView
         android:id="@+id/tvSeeMoreGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="See More"
-        android:textSize="12sp"
         android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvGroupLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvGroupLabel" />
 
-    <HorizontalScrollView
-        android:id="@+id/scrollGroups"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGroups"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:scrollbars="none"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/tvGroupLabel"
-        tools:ignore="SpeakableTextPresentCheck">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="30dp"
-                app:cardElevation="0dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@android:drawable/sym_def_app_icon"
-                    android:scaleType="centerCrop"
-                    tools:ignore="ContentDescription" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="30dp"
-                app:cardElevation="0dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@android:drawable/sym_def_app_icon"
-                    android:scaleType="centerCrop"
-                    tools:ignore="ContentDescription" />
-            </androidx.cardview.widget.CardView>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@android:drawable/ic_input_add"
-                android:padding="12dp"
-                android:background="@drawable/bg_circle_border"
-                app:tint="#000000"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-    </HorizontalScrollView>
+        tools:listitem="@layout/item_contact" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/scrollGroups">
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/rvGroups">
 
         <LinearLayout
             android:id="@+id/btnSplitBill"
@@ -219,9 +133,9 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/bg_rounded_grey"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:paddingStart="32dp"
-            android:paddingEnd="32dp"
-            android:orientation="horizontal">
+            android:paddingEnd="32dp">
 
             <ImageView
                 android:layout_width="32dp"
@@ -233,11 +147,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:text="Split the bill"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:textColor="#000000"
-                android:layout_marginStart="24dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -247,9 +161,9 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/bg_rounded_grey"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:paddingStart="32dp"
-            android:paddingEnd="32dp"
-            android:orientation="horizontal">
+            android:paddingEnd="32dp">
 
             <ImageView
                 android:layout_width="32dp"
@@ -261,11 +175,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:text="Recent Bill"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:textColor="#000000"
-                android:layout_marginStart="24dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -274,9 +188,9 @@
             android:layout_height="80dp"
             android:background="@drawable/bg_rounded_grey"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:paddingStart="32dp"
-            android:paddingEnd="32dp"
-            android:orientation="horizontal">
+            android:paddingEnd="32dp">
 
             <ImageView
                 android:layout_width="32dp"
@@ -288,11 +202,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:text="Owe"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:textColor="#000000"
-                android:layout_marginStart="24dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
