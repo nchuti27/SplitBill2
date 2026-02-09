@@ -115,7 +115,7 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:src="@android:drawable/ic_menu_add"
-            app:tint="@color/white" />
+            app:tint="@color/fintech_blue" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
