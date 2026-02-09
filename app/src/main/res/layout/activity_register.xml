@@ -97,7 +97,7 @@
         android:id="@+id/button"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:backgroundTint="#2E7D32"
+        android:backgroundTint="#3D79ca"
         android:text="Register"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
