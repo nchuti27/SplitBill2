@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".notification"
+            android:exported="false" />
+        <activity
             android:name=".BillDetail"
             android:exported="false" />
         <activity
