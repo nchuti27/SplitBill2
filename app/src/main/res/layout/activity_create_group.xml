@@ -107,10 +107,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="ADD"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/fintech_blue"
         android:textStyle="bold"
         app:icon="@drawable/ic_add"
-        app:iconTint="@color/purple_500"
+        app:iconTint="@color/fintech_blue"
         app:layout_constraintBaseline_toBaselineOf="@id/tvParticipantsLabel"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -135,7 +135,7 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/fintech_blue"
         android:text="Create Group"
         android:textSize="16sp"
         android:textStyle="bold"
