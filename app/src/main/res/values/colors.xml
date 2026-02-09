@@ -4,4 +4,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="purple_500">#6200EE</color>
+
+    <color name="fintech_blue">#3D79CA</color>
+    <color name="fintech_light_bg">#F4F8FB</color>
+    <color name="fintech_card_bg">#FFFFFF</color>
+    <color name="fintech_text_main">#1A1A1A</color>
+    <color name="fintech_text_sub">#666666</color>
 </resources>
