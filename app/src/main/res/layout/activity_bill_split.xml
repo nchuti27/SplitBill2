@@ -164,7 +164,7 @@
                 android:id="@+id/btnSplit"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:background="@drawable/bg_rounded_button"
+                android:background="@drawable/bg_fintech_button"
                 android:stateListAnimator="@null"
                 android:text="SPLIT BILL"
                 android:textColor="@android:color/white"
