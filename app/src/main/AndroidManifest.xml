@@ -11,6 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+
+        <activity
+            android:name=".WhoPays"
+            android:exported="false" />
+
+        <activity android:name=".Friend_list" android:exported="false" />
+        <activity android:name=".Group_list" android:exported="false" />
+        <activity android:name=".add_friend" android:exported="false" />
+        <activity android:name=".notification" android:exported="false" />
+
         <activity
             android:name=".BillSplit"
             android:exported="false" />
@@ -44,12 +54,12 @@
         <activity
             android:name=".Register"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
