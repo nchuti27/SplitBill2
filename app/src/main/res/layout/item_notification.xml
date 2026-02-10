@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    android:background="#E0E0E0"
-    android:padding="12dp">
+    android:layout_marginBottom="1dp"
+    android:background="#F8F9FA"
+    android:padding="16dp">
     <ImageView
-        android:id="@+id/ivNotiProfile"
+        android:id="@+id/ivNotiIcon"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:src="@android:drawable/ic_menu_gallery"
@@ -18,44 +19,64 @@
         android:id="@+id/tvNotiMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="xx Sending you a friend request."
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
         android:textColor="@android:color/black"
         android:textSize="14sp"
+        android:textStyle="normal"
+        tools:text="User A sent a friend request."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivNotiProfile"
-        app:layout_constraintTop_toTopOf="@+id/ivNotiProfile" />
+        app:layout_constraintStart_toEndOf="@+id/ivNotiIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivNotiIcon" />
 
-    <Button
-        android:id="@+id/btnDelete"
+    <TextView
+        android:id="@+id/tvNotiTime"
         android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#BDBDBD"
-        android:minWidth="80dp"
-        android:paddingHorizontal="8dp"
-        android:text="Delete"
-        android:textAllCaps="false"
-        android:textColor="#505050"
-        android:textSize="12sp"
-        app:cornerRadius="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#757575"
+        android:textSize="11sp"
+        tools:text="2 min ago"
         app:layout_constraintStart_toStartOf="@+id/tvNotiMessage"
         app:layout_constraintTop_toBottomOf="@+id/tvNotiMessage" />
 
-    <Button
-        android:id="@+id/btnAccept"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_marginStart="8dp"
-        android:backgroundTint="@android:color/black"
-        android:minWidth="80dp"
-        android:paddingHorizontal="8dp"
-        android:text="Accept"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        app:cornerRadius="8dp"
-        app:layout_constraintStart_toEndOf="@+id/btnDelete"
-        app:layout_constraintTop_toTopOf="@+id/btnDelete" />
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvNotiMessage"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotiTime">
+
+        <Button
+            android:id="@+id/btnSecondary"
+            android:layout_width="111dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#E0E0E0"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:cornerRadius="18dp"
+            app:elevation="0dp" />
+
+        <Button
+            android:id="@+id/btnPrimary"
+            android:layout_width="114dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/black"
+            android:text="Accept"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:cornerRadius="18dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

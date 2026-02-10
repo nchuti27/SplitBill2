@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Friend_list"
+            android:exported="false" />
+        <activity
+            android:name=".Group_list"
+            android:exported="false" />
+        <activity
             android:name=".GroupDetail"
             android:exported="false" />
         <activity
