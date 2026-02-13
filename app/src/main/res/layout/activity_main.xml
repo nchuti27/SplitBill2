@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/fintech_light_bg"
     android:padding="24dp">
 
     <ImageView
@@ -14,7 +14,7 @@
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="#2E7D32"
+        app:tint="@color/fintech_blue"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -22,11 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Split Next"
-        android:textColor="#000000"
+        android:textColor="@color/fintech_blue"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:layout_marginStart="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgUserProfile"
-        app:layout_constraintEnd_toStartOf="@+id/btnNotification"
         app:layout_constraintStart_toEndOf="@+id/imgUserProfile"
         app:layout_constraintTop_toTopOf="@+id/imgUserProfile" />
 
@@ -38,7 +38,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imgUserProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgUserProfile"
-        app:tint="#000000"
+        app:tint="@color/fintech_text_sub"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -50,7 +50,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnLogout"
         app:layout_constraintEnd_toStartOf="@+id/btnLogout"
         app:layout_constraintTop_toTopOf="@+id/btnLogout"
-        app:tint="#000000"
+        app:tint="@color/fintech_blue"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Friend"
-        android:textColor="#000000"
+        android:textColor="@color/fintech_text_main"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,8 +70,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="See More"
-        android:textColor="#000000"
-        android:textSize="12sp"
+        android:textColor="@color/fintech_blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvFriendLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvFriendLabel" />
@@ -92,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Group"
-        android:textColor="#000000"
+        android:textColor="@color/fintech_text_main"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,8 +104,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="See More"
-        android:textColor="#000000"
-        android:textSize="12sp"
+        android:textColor="@color/fintech_blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tvGroupLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvGroupLabel" />
@@ -122,90 +124,93 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/rvGroups">
 
         <LinearLayout
             android:id="@+id/btnSplitBill"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/bg_rounded_grey"
+            android:layout_height="70dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_search"
+            android:elevation="2dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp">
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
 
             <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@android:drawable/ic_menu_my_calendar"
-                app:tint="#000000"
+                app:tint="@color/fintech_blue"
                 tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="20dp"
                 android:text="Split the bill"
-                android:textColor="#000000"
-                android:textSize="18sp"
+                android:textColor="@color/fintech_text_main"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/btnRecentBill"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/bg_rounded_grey"
+            android:layout_height="70dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_search"
+            android:elevation="2dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp">
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
 
             <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@android:drawable/ic_menu_agenda"
-                app:tint="#000000"
+                app:tint="@color/fintech_blue"
                 tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="20dp"
                 android:text="Recent Bill"
-                android:textColor="#000000"
-                android:textSize="18sp"
+                android:textColor="@color/fintech_text_main"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/btnOwe"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@drawable/bg_rounded_grey"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_search"
+            android:elevation="2dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp">
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
 
             <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@android:drawable/ic_menu_rotate"
-                app:tint="#000000"
+                app:tint="@color/fintech_blue"
                 tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="20dp"
                 android:text="Owe"
-                android:textColor="#000000"
-                android:textSize="18sp"
+                android:textColor="@color/fintech_text_main"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
