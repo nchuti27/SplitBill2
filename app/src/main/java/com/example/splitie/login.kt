@@ -57,8 +57,8 @@ class login : AppCompatActivity() {
         forgotP?.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
-        }
 
+        }
     }
     private fun init(){
         btnLogin = findViewById(R.id.login_btn)
