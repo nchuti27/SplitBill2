@@ -1,11 +1,17 @@
 package com.example.splitie
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -18,6 +24,9 @@ class MainActivity : AppCompatActivity() {
     var btnSplitBill: LinearLayout? = null
     var btnRecentBill: LinearLayout? = null
     var btnOwe: LinearLayout? = null
+
+    var btnLogout: ImageView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -60,6 +69,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Owe::class.java)
             startActivity(intent)
         }
+        btnLogout!!.setOnClickListener {
+            showLogoutDialog() // เรียกใช้ฟังก์ชันแสดง Popup
+        }
     }
     private fun init() {
         imgUserProfile = findViewById(R.id.imgUserProfile)
@@ -71,5 +83,41 @@ class MainActivity : AppCompatActivity() {
         btnSplitBill = findViewById(R.id.btnSplitBill)
         btnRecentBill = findViewById(R.id.btnRecentBill)
         btnOwe = findViewById(R.id.btnOwe)
+        btnLogout = findViewById(R.id.btnLogout)
+    }
+    private fun showLogoutDialog() {
+        // 1. โหลดไฟล์ XML ของ Popup (dialog_logout.xml)
+        val view = LayoutInflater.from(this).inflate(R.layout.dialog_logout, null)
+
+        // 2. สร้าง Dialog
+        val builder = AlertDialog.Builder(this)
+        builder.setView(view)
+        val dialog = builder.create()
+
+        // 3. ทำให้พื้นหลังใส (เพื่อให้เห็นขอบโค้งของ CardView)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        // 4. เชื่อมต่อปุ่มภายใน Popup
+        val btnCancel = view.findViewById<Button>(R.id.btnCancel)
+        val btnConfirm = view.findViewById<Button>(R.id.btnConfirm)
+
+        // 5. ปุ่ม No
+        btnCancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        // 6. ปุ่ม Yes
+        btnConfirm.setOnClickListener {
+            dialog.dismiss() // ปิด Popup
+            Toast.makeText(this, "Logged Out Successfully", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, login::class.java)
+            // เคลียร์หน้าเก่าทิ้งให้หมด (กด Back ไม่ได้)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
+        // 7. แสดง Popup
+        dialog.show()
     }
 }
