@@ -35,7 +35,7 @@ class add_friend : AppCompatActivity() {
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
 
         btnBack.setOnClickListener{
-            val intent = Intent(this, FULLSCREEN_MODE_REQUEST_ENTER::class.java)
+            val intent = Intent(this, Friend_list::class.java)
             startActivity(intent)
         }
 
