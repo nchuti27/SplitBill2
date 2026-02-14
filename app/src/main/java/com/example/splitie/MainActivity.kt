@@ -11,6 +11,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    var imgUserProfile: ImageView? = null
+    var btnNotification: ImageView? = null
+    var tvSeeMoreFriend: TextView? = null
+    var tvSeeMoreGroup: TextView? = null
+    var btnSplitBill: LinearLayout? = null
+    var btnRecentBill: LinearLayout? = null
+    var btnOwe: LinearLayout? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,59 +29,47 @@ class MainActivity : AppCompatActivity() {
         }
 
         init()
-    }
-    private fun init() {
-        // --- 1. Edit Profile (รูปโปรไฟล์) ---
-        val imgUserProfile = findViewById<ImageView>(R.id.imgUserProfile)
-        imgUserProfile.setOnClickListener {
+        imgUserProfile!!.setOnClickListener {
             val intent = Intent(this, EditUser::class.java)
             startActivity(intent)
         }
-
-        // --- 2. Notification (กระดิ่งแจ้งเตือน) ---
-        val btnNotification = findViewById<ImageView>(R.id.btnNotification)
-        btnNotification.setOnClickListener {
-            val intent = Intent(this, notification::class.java) // เช็กชื่อไฟล์ Class ให้ตรง (ตัวเล็ก/ใหญ่)
+        btnNotification!!.setOnClickListener {
+            val intent = Intent(this, notification::class.java)
             startActivity(intent)
         }
-
-        // --- 3. Friends List ---
-        // (แนะนำให้ใช้ tvSeeMoreFriend ถ้าอยากให้กดที่คำว่า See More)
-        val tvSeeMoreFriend = findViewById<TextView>(R.id.tvFriendLabel) // หรือแก้เป็น R.id.tvSeeMoreFriend
-        tvSeeMoreFriend.setOnClickListener {
+        tvSeeMoreFriend!!.setOnClickListener {
             val intent = Intent(this, Friend_list::class.java)
             startActivity(intent)
         }
 
-        // --- 4. Group List ---
-        // (แนะนำให้ใช้ tvSeeMoreGroup ถ้าอยากให้กดที่คำว่า See More)
-        val tvSeeMoreGroup = findViewById<TextView>(R.id.tvGroupLabel) // หรือแก้เป็น R.id.tvSeeMoreGroup
-        tvSeeMoreGroup.setOnClickListener {
+        tvSeeMoreGroup!!.setOnClickListener {
             val intent = Intent(this, Group_list::class.java)
             startActivity(intent)
         }
-
-        // --- 5. ปุ่มเมนูด้านล่าง (3 ปุ่ม) ---
-        val btnSplitBill = findViewById<LinearLayout>(R.id.btnSplitBill)
-        val btnRecentBill = findViewById<LinearLayout>(R.id.btnRecentBill)
-        val btnOwe = findViewById<LinearLayout>(R.id.btnOwe)
-
-        // ปุ่ม Split Bill
-        btnSplitBill.setOnClickListener {
+        btnSplitBill!!.setOnClickListener {
             val intent = Intent(this, BillSplit::class.java)
             startActivity(intent)
         }
 
-        // ปุ่ม Recent Bill
-        btnRecentBill.setOnClickListener {
+        btnRecentBill!!.setOnClickListener {
             val intent = Intent(this, RecentBill::class.java)
             startActivity(intent)
         }
 
-        // ปุ่ม Owe (แก้ไขบั๊กตรงนี้ให้แล้ว: เปลี่ยนจาก btnSplitBill เป็น btnOwe)
-        btnOwe.setOnClickListener {
+        btnOwe!!.setOnClickListener {
             val intent = Intent(this, Owe::class.java)
             startActivity(intent)
         }
+    }
+    private fun init() {
+        imgUserProfile = findViewById(R.id.imgUserProfile)
+        btnNotification = findViewById(R.id.btnNotification)
+
+        tvSeeMoreFriend = findViewById(R.id.tvFriendLabel)
+        tvSeeMoreGroup = findViewById(R.id.tvGroupLabel)
+
+        btnSplitBill = findViewById(R.id.btnSplitBill)
+        btnRecentBill = findViewById(R.id.btnRecentBill)
+        btnOwe = findViewById(R.id.btnOwe)
     }
 }
