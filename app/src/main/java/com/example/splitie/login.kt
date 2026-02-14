@@ -26,8 +26,6 @@ class login : AppCompatActivity() {
     join_txt*/
     override fun onCreate(savedInstanceState: Bundle?) {
 
-
-
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
