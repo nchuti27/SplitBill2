@@ -65,6 +65,7 @@ class Friend_list : AppCompatActivity() {
             rvFriendList?.adapter = friendAdapter
         }
     }
+
 }
 
 // ==========================================
