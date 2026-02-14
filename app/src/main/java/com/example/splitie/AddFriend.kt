@@ -15,7 +15,7 @@ class AddFriend : AppCompatActivity() {
 
     var etSearchUser: EditText? = null
     var btnAdd: Button? = null
-    var btnBack: Button? = null
+    var btnBack: ImageButton? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,21 +28,21 @@ class AddFriend : AppCompatActivity() {
         init()
     }
     private fun init() {
-        val etSearchUser = findViewById<EditText>(R.id.etSearchUser)
-        val btnAdd = findViewById<Button>(R.id.btnAdd)
+        etSearchUser = findViewById<EditText>(R.id.etSearchUser)
+        btnAdd = findViewById<Button>(R.id.btnAdd)
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
 
         btnBack.setOnClickListener{
-            val intent = Intent(this, FULLSCREEN_MODE_REQUEST_ENTER::class.java)
-            startActivity(intent)
+            val intent = Intent(this, Friend_list::class.java)
+//            startActivity(intent)
         }
 
 
-        btnAdd.setOnClickListener {
-            val username = etSearchUser.text.toString().trim()
+        btnAdd?.setOnClickListener {
+            val username = etSearchUser?.text.toString().trim()
 
             if (username.isEmpty()) {
-                etSearchUser.error = "Please enter username"
+                etSearchUser?.error = "Please enter username"
                 return@setOnClickListener
             }
 
