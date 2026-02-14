@@ -24,7 +24,7 @@
             android:name=".Group_list"
             android:exported="false" />
         <activity
-            android:name=".add_friend"
+            android:name=".AddFriend"
             android:exported="false" />
         <activity
             android:name=".notification"

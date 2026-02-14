@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -44,7 +43,7 @@ class Friend_list : AppCompatActivity() {
 
         // 2. ตั้งค่าปุ่มกด
         btnAddFriendPage.setOnClickListener {
-            val intent = Intent(this, add_friend::class.java)
+            val intent = Intent(this, AddFriend::class.java)
             startActivity(intent)
         }
 
