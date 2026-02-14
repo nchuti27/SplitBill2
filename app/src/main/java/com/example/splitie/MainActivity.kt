@@ -15,19 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
-        // ตั้งค่าขอบจอ (System Bars)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // เรียกใช้ฟังก์ชัน init ที่เราสร้างไว้ด้านล่าง
         init()
     }
-
-    // ฟังก์ชันสำหรับกำหนดค่าเริ่มต้นและการกดปุ่มต่างๆ
     private fun init() {
         // --- 1. Edit Profile (รูปโปรไฟล์) ---
         val imgUserProfile = findViewById<ImageView>(R.id.imgUserProfile)
