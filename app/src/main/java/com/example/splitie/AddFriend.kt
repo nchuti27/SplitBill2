@@ -30,13 +30,13 @@ class AddFriend : AppCompatActivity() {
     private fun init() {
         etSearchUser = findViewById<EditText>(R.id.etSearchUser)
         btnAdd = findViewById<Button>(R.id.btnAdd)
+
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
 
         btnBack.setOnClickListener{
             val intent = Intent(this, Friend_list::class.java)
-//            startActivity(intent)
+            startActivity(intent)
         }
-
 
         btnAdd?.setOnClickListener {
             val username = etSearchUser?.text.toString().trim()
@@ -56,7 +56,7 @@ class AddFriend : AppCompatActivity() {
         val isUserFound = mockDatabase.contains(username)
 
         if (isUserFound) {
-            val intent = Intent(this, find_user::class.java)
+            val intent = Intent(this, FindUser::class.java)
             intent.putExtra("FRIEND_NAME", username)
             startActivity(intent)
         } else {
