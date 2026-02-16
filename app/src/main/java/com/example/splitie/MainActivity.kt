@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         init()
         imgUserProfile!!.setOnClickListener {
-            val intent = Intent(this, EditUser::class.java)
+            val intent = Intent(this, EditProfile::class.java)
             startActivity(intent)
         }
         btnNotification!!.setOnClickListener {
