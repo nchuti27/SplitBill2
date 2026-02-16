@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnRecentBill!!.setOnClickListener {
-            val intent = Intent(this, RecentBill::class.java)
+            val intent = Intent(this, BillDetail::class.java)
             startActivity(intent)
         }
 
@@ -119,5 +119,6 @@ class MainActivity : AppCompatActivity() {
         }
         // 7. แสดง Popup
         dialog.show()
+
     }
 }
